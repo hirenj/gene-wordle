@@ -36,6 +36,10 @@ export const Keyboard = ({
         onEnter()
       } else if (e.code === 'Backspace') {
         onDelete()
+      } else if (e.key.length === 1 && e.key >= '0' && e.key <= '9') {
+	  onChar(e.key)
+      } else if (e.key === ' ') {
+	  onChar(' ')
       } else {
         const key = e.key.toUpperCase()
         if (key.length === 1 && key >= 'A' && key <= 'Z') {
@@ -51,6 +55,17 @@ export const Keyboard = ({
 
   return (
     <div>
+      <div className="flex justify-center mb-1">
+        {['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'].map((key) => (
+          <Key
+            value={key}
+            key={key}
+            onClick={onClick}
+            status={charStatuses[key]}
+            isRevealing={isRevealing}
+          />
+        ))}
+      </div>
       <div className="flex justify-center mb-1">
         {['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'].map((key) => (
           <Key
@@ -77,7 +92,7 @@ export const Keyboard = ({
         <Key width={65.4} value="ENTER" onClick={onClick}>
           {ENTER_TEXT}
         </Key>
-        {['Z', 'X', 'C', 'V', 'B', 'N', 'M'].map((key) => (
+        {['Z', 'X', 'C', 'V', 'B', 'N', 'M',' ','_'].map((key) => (
           <Key
             value={key}
             key={key}

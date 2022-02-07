@@ -1,8 +1,8 @@
 {
+  "homepage": "https://andrewholding.github.io/gene-wordle/",
   "name": "game",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/andrewholding/react-wordle.git",
   "dependencies": {
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
