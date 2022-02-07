@@ -18,7 +18,8 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           Andrew Holding
         </a>{' '}
       </p>
-      <p>Based on the open source version from cwackerfuss - {' '}
+      <p className="text-sm text-gray-500 dark:text-gray-300">
+	Built on the open source version from cwackerfuss - {' '}
         <a
           href="https://github.com/cwackerfuss/react-wordle"
           className="underline font-bold"
