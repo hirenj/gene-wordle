@@ -6,7 +6,7 @@ are used to extend shorter names, and 0-9 are valid characters.
 
 Good luck!
 
-You can play at [https://andrewholding.github.io/gene-wordle/].
+You can play at [Genele online here](https://andrewholding.github.io/gene-wordle/).
 
 Made by [Andrew Holding](http://andrewholding.com), build on code from 
 [react-wordle](https://github.com/cwackerfuss/react-wordle).
