@@ -13,10 +13,10 @@ filteredGenes<-x[!grepl("-", x$hgnc_symbol),]
 
 #max length 5 letter
 filteredGenes5<-filteredGenes[nchar(filteredGenes) <=5]
-filteredGenes3to5<-filteredGenes[nchar(filteredGenes5) > 2]
+filteredGenes3to5<-filteredGenes5[nchar(filteredGenes5) > 2]
 
 
 filteredGenes3to5[nchar(filteredGenes3to5)==4]<-paste0(filteredGenes3to5[nchar(filteredGenes3to5)==4]," ")
 filteredGenes3to5[nchar(filteredGenes3to5)==3]<-paste0(filteredGenes3to5[nchar(filteredGenes3to5)==3],"  ")
 
-write.table(tolower(filteredGenes3to5),file = 'genes.csv',col.names=FALSE, row.names=FALSE, eol = ",\r\n")
+write.table(paste0("'",tolower(filteredGenes3to5),"'"),file = 'genes.csv',col.names=FALSE, row.names=FALSE, quote=FALSE, eol = ",\r\n\t")
