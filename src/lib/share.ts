@@ -6,7 +6,7 @@ export const shareStatus = (guesses: string[], lost: boolean) => {
   navigator.clipboard.writeText(
     `#${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/12\n\n` +
       generateEmojiGrid(guesses)  +
-      `  #ShareGenele https://bit.ly/3Nenmih`
+      `\n\n#ShareGenele\nhttps://bit.ly/3Nenmih`
   )
 }
 
